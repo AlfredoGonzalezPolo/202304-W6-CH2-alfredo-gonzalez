@@ -9,9 +9,7 @@ export type PhoneAction = {
   payload: Phone | string | boolean;
 };
 
-export const hangPhoneAction = createAction<Phone>(actionTypes.hang);
-
-export const callPhoneAction = createAction<Phone>(actionTypes.call);
+export const updatePhoneAction = createAction<boolean>(actionTypes.updatecall);
 
 export const updateDisplay = createAction<string>(actionTypes.updateDisplay);
 
