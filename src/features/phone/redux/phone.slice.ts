@@ -16,5 +16,5 @@ const slicePhone = createSlice({
     }),
   },
 });
-export const ac = slicePhone.actions;
+export const updateCall = slicePhone.actions;
 export default slicePhone.reducer;
