@@ -12,9 +12,16 @@ const slicePhone = createSlice({
   reducers: {
     updateCall: (state) => ({
       ...state,
-      phone: { ...state, isCalling: state.isCalling },
+      phone: { ...state, isCalling: !state.isCalling },
     }),
+
+    updateDisplay: (state, { payload }) => ({
+      ...state,
+      phone: { ...state, phoneNumber: state.phoneNumber + payload },
+    }),
+
+    // deleteDisplay: (state) => ({})
   },
 });
-export const updateCall = slicePhone.actions;
+export const { updateCall, updateDisplay } = slicePhone.actions;
 export default slicePhone.reducer;
